@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Notification } from '../types';
 import { mockNotifications } from '../data/mockData';
 import { useAuth } from './AuthContext';

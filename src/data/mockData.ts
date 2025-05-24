@@ -16,7 +16,7 @@ export const mockUsers: User[] = [
     name: 'Mr Mens',
     email: 'admin@example.com',
     role: 'Admin',
-    avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    avatar: './mens.jpg',
     department: 'Operations',
     position: 'Operations Manager'
   },
@@ -34,7 +34,7 @@ export const mockUsers: User[] = [
     name: 'Mr Alfred',
     email: 'dev@example.com',
     role: 'Developer',
-    avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    avatar: './fred.jpg',
     department: 'Engineering',
     position: 'Frontend Developer'
   },
@@ -43,7 +43,7 @@ export const mockUsers: User[] = [
     name: 'Miss Joyce',
     email: 'staff@example.com',
     role: 'Non-Tech',
-    avatar: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    avatar: './joyce.jpg',
     department: 'Marketing',
     position: 'Marketing Specialist'
   }

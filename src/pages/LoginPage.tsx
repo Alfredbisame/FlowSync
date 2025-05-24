@@ -76,7 +76,6 @@ const LoginPage: React.FC = () => {
                 options={roles}
                 value={selectedRole}
                 onChange={(e) => setSelectedRole(e.target.value)}
-                leftIcon={<UserCircle className="h-5 w-5 text-gray-400" />}
               />
             )}
             

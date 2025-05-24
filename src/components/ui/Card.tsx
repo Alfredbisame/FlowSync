@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
   noPadding = false 
 }) => {
   return (
-    <div className={`bg-white rounded-lg shadow-md overflow-hidden ${className}`}>
+    <div className={`bg-white rounded-lg shadow-sm overflow-hidden ${className}`}>
       {(title || subtitle) && (
         <div className="px-6 py-4 border-b border-gray-100">
           {title && <h3 className="text-lg font-semibold text-gray-800">{title}</h3>}
