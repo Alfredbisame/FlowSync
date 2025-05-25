@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ sidebarOpen, setSidebarOpen }) => {
         <span className="sr-only">Open sidebar</span>
         <Menu className="h-6 w-6" aria-hidden="true" />
       </button>
-
+      
       {/* Separator */}
       <div className="h-6 w-px bg-gray-200 lg:hidden" aria-hidden="true" />
 

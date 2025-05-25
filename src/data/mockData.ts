@@ -4,7 +4,7 @@ import { User, Task, Ticket, Notification, UserRole, TaskStatus, TaskPriority, T
 export const mockUsers: User[] = [
   {
     id: 'user-1',
-    name: 'Jay Baffour',
+    name: 'Kyei Baffour',
     email: 'ceo@example.com',
     role: 'CEO',
     avatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',

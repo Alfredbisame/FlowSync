@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, HTMLAttributes } from 'react';
 
-interface CardProps {
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
   title?: string;
   subtitle?: string;
   children: ReactNode;
@@ -15,10 +15,14 @@ const Card: React.FC<CardProps> = ({
   children, 
   footer, 
   className = '',
-  noPadding = false 
+  noPadding = false,
+  ...props // Spread all event and attribute props
 }) => {
   return (
-    <div className={`bg-white rounded-lg shadow-sm overflow-hidden ${className}`}>
+    <div 
+      {...props} // ✅ This is key: forwards onClick and others
+      className={`bg-white rounded-lg shadow-sm overflow-hidden ${className}`}
+    >
       {(title || subtitle) && (
         <div className="px-6 py-4 border-b border-gray-100">
           {title && <h3 className="text-lg font-semibold text-gray-800">{title}</h3>}
