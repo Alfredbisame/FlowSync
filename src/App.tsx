@@ -11,7 +11,8 @@ import TasksPage from './pages/TasksPage';
 import TicketsPage from './pages/TicketsPage';
 import AnalyticsPage from './pages/AnalyticsPage';
 import TeamPage from './pages/TeamPage';
-import ProjectsPage from './pages/ProjectsPage';
+import { ProjectsPage } from './pages/ProjectsPage';
+import SettingsPage from './pages/SettingsPage';
 
 // Protected route component
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -74,10 +75,11 @@ const AppRoutes = () => (
     
     <Route path="/settings" element={
       <ProtectedRoute>
-        <div className="p-8">
+        {/* <div className="p-8">
           <h1 className="text-2xl font-bold">Settings Page</h1>
           <p className="mt-4">Settings functionality coming soon.</p>
-        </div>
+        </div> */}
+        <SettingsPage />
       </ProtectedRoute>
     } />
     

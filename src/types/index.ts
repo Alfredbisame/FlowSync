@@ -88,3 +88,21 @@ export interface UserPerformance {
   onTimeDelivery: number;
   extensionRequests: number;
 }
+
+export interface Project {
+  id: string;
+  name: string;
+  status: 'Active' | 'Completed' | string;
+  priority: 'Critical' | 'High' | 'Medium' | 'Low'; 
+  budget: number;
+  spent: number;
+  description: string; 
+  progress: number;
+  teamMembers: string[];
+  startDate: string;
+  endDate: string;
+  tasks: {
+    total: number;
+    // Add other task-related properties if needed
+  };
+}
