@@ -4,10 +4,13 @@ export interface User {
   id: string;
   name: string;
   email: string;
-  role: UserRole;
-  avatar?: string;
+  role: string;
   department?: string;
+  avatar?: string;
   position?: string;
+  isActive: boolean;
+  createdAt: string;
+  lastLogin?: string;
 }
 
 export type TaskStatus = 'To Do' | 'In Progress' | 'Blocked' | 'Under Review' | 'Completed';

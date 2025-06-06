@@ -1,4 +1,4 @@
-import { User, Task, Ticket, Notification, UserRole, TaskStatus, TaskPriority, TicketStatus, TicketSeverity, DepartmentPerformance, UserPerformance } from '../types';
+import { User, Task, Ticket, Notification, UserRole, TaskStatus, TaskPriority, TicketStatus, TicketSeverity, DepartmentPerformance, UserPerformance, } from '../types';
 
 // Mock Users
 export const mockUsers: User[] = [
@@ -9,7 +9,10 @@ export const mockUsers: User[] = [
     role: 'CEO',
     avatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     department: 'Executive',
-    position: 'Chief Executive Officer'
+    position: 'Chief Executive Officer',
+    isActive: true,
+    createdAt: '2024-01-01T00:00:00Z',
+    lastLogin: '2024-01-15T10:30:00Z'
   },
   {
     id: 'user-2',
@@ -18,7 +21,10 @@ export const mockUsers: User[] = [
     role: 'Admin',
     avatar: './mens.jpg',
     department: 'Operations',
-    position: 'Operations Manager'
+    position: 'Operations Manager',
+    isActive: true,
+    createdAt: '2024-01-01T00:00:00Z',
+    lastLogin: '2024-01-15T09:15:00Z'
   },
   {
     id: 'user-3',
@@ -27,7 +33,10 @@ export const mockUsers: User[] = [
     role: 'Team Lead',
     avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     department: 'Engineering',
-    position: 'Senior Developer'
+    position: 'Senior Developer',
+    isActive: false,
+    createdAt: '2024-01-01T00:00:00Z',
+    lastLogin: '2024-01-15T09:15:00Z'
   },
   {
     id: 'user-4',
@@ -36,7 +45,10 @@ export const mockUsers: User[] = [
     role: 'Developer',
     avatar: './fred.jpg',
     department: 'Engineering',
-    position: 'Frontend Developer'
+    position: 'Frontend Developer',
+    isActive: true,
+    createdAt: '2024-01-01T00:00:00Z',
+    lastLogin: '2024-01-15T09:15:00Z'
   },
   {
     id: 'user-5',
@@ -45,7 +57,10 @@ export const mockUsers: User[] = [
     role: 'Non-Tech',
     avatar: './joyce.jpg',
     department: 'Marketing',
-    position: 'Marketing Specialist'
+    position: 'Marketing Specialist',
+    isActive: false,
+    createdAt: '2024-01-01T00:00:00Z',
+    lastLogin: '2024-01-15T09:15:00Z'
   }
 ];
 
