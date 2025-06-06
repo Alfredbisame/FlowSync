@@ -352,3 +352,205 @@ export const mockProjectProgress = [
   { month: 'May', completedTasks: 35, estimatedTasks: 40 },
   { month: 'Jun', completedTasks: 0, estimatedTasks: 45 }
 ];
+
+export interface Project {
+  id: string;
+  name: string;
+  description: string;
+  status: 'Planning' | 'Active' | 'On Hold' | 'Completed' | 'Cancelled';
+  priority: 'Low' | 'Medium' | 'High' | 'Critical';
+  startDate: string;
+  endDate: string;
+  budget: number;
+  spent: number;
+  progress: number;
+  managerId: string;
+  teamMembers: string[];
+  tasks: {
+    total: number;
+    completed: number;
+    inProgress: number;
+    pending: number;
+  };
+  milestones: {
+    id: string;
+    name: string;
+    dueDate: string;
+    completed: boolean;
+  }[];
+  tags: string[];
+  client?: string;
+  department: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export const mockProjects: Project[] = [
+  {
+    id: '1',
+    name: 'E-commerce Platform Redesign',
+    description: 'Complete overhaul of the existing e-commerce platform with modern UI/UX and enhanced functionality.',
+    status: 'Active',
+    priority: 'High',
+    startDate: '2024-01-15',
+    endDate: '2024-06-30',
+    budget: 150000,
+    spent: 87500,
+    progress: 65,
+    managerId: '1',
+    teamMembers: ['1', '2', '3', '4', '5'],
+    tasks: {
+      total: 45,
+      completed: 28,
+      inProgress: 12,
+      pending: 5
+    },
+    milestones: [
+      { id: '1', name: 'UI/UX Design Complete', dueDate: '2024-02-28', completed: true },
+      { id: '2', name: 'Backend API Development', dueDate: '2024-04-15', completed: true },
+      { id: '3', name: 'Frontend Implementation', dueDate: '2024-05-30', completed: false },
+      { id: '4', name: 'Testing & QA', dueDate: '2024-06-15', completed: false }
+    ],
+    tags: ['Web Development', 'E-commerce', 'React', 'Node.js'],
+    client: 'TechCorp Inc.',
+    department: 'Engineering',
+    createdAt: '2024-01-10T00:00:00Z',
+    updatedAt: '2024-01-14T10:30:00Z'
+  },
+  {
+    id: '2',
+    name: 'Mobile App Development',
+    description: 'Native mobile application for iOS and Android platforms with real-time features.',
+    status: 'Active',
+    priority: 'High',
+    startDate: '2024-02-01',
+    endDate: '2024-08-15',
+    budget: 200000,
+    spent: 45000,
+    progress: 35,
+    managerId: '2',
+    teamMembers: ['2', '6', '7', '8'],
+    tasks: {
+      total: 38,
+      completed: 12,
+      inProgress: 15,
+      pending: 11
+    },
+    milestones: [
+      { id: '1', name: 'App Architecture Design', dueDate: '2024-02-20', completed: true },
+      { id: '2', name: 'Core Features Development', dueDate: '2024-05-01', completed: false },
+      { id: '3', name: 'Beta Testing', dueDate: '2024-07-01', completed: false },
+      { id: '4', name: 'App Store Deployment', dueDate: '2024-08-10', completed: false }
+    ],
+    tags: ['Mobile', 'React Native', 'iOS', 'Android'],
+    client: 'StartupXYZ',
+    department: 'Engineering',
+    createdAt: '2024-01-25T00:00:00Z',
+    updatedAt: '2024-02-01T09:15:00Z'
+  },
+  {
+    id: '3',
+    name: 'Marketing Campaign Q2',
+    description: 'Comprehensive digital marketing campaign for Q2 product launch.',
+    status: 'Planning',
+    priority: 'Medium',
+    startDate: '2024-04-01',
+    endDate: '2024-06-30',
+    budget: 75000,
+    spent: 5000,
+    progress: 15,
+    managerId: '3',
+    teamMembers: ['3', '9', '10'],
+    tasks: {
+      total: 25,
+      completed: 3,
+      inProgress: 5,
+      pending: 17
+    },
+    milestones: [
+      { id: '1', name: 'Campaign Strategy', dueDate: '2024-03-15', completed: true },
+      { id: '2', name: 'Content Creation', dueDate: '2024-04-15', completed: false },
+      { id: '3', name: 'Campaign Launch', dueDate: '2024-05-01', completed: false },
+      { id: '4', name: 'Performance Analysis', dueDate: '2024-06-25', completed: false }
+    ],
+    tags: ['Marketing', 'Digital Campaign', 'Social Media'],
+    department: 'Marketing',
+    createdAt: '2024-02-01T00:00:00Z',
+    updatedAt: '2024-02-10T14:20:00Z'
+  },
+  {
+    id: '4',
+    name: 'Data Analytics Dashboard',
+    description: 'Business intelligence dashboard for real-time data visualization and reporting.',
+    status: 'Completed',
+    priority: 'Medium',
+    startDate: '2023-10-01',
+    endDate: '2024-01-31',
+    budget: 80000,
+    spent: 78000,
+    progress: 100,
+    managerId: '4',
+    teamMembers: ['4', '11', '12'],
+    tasks: {
+      total: 32,
+      completed: 32,
+      inProgress: 0,
+      pending: 0
+    },
+    milestones: [
+      { id: '1', name: 'Requirements Analysis', dueDate: '2023-10-15', completed: true },
+      { id: '2', name: 'Database Design', dueDate: '2023-11-15', completed: true },
+      { id: '3', name: 'Dashboard Development', dueDate: '2023-12-31', completed: true },
+      { id: '4', name: 'User Training', dueDate: '2024-01-25', completed: true }
+    ],
+    tags: ['Analytics', 'Dashboard', 'Business Intelligence'],
+    department: 'Operations',
+    createdAt: '2023-09-15T00:00:00Z',
+    updatedAt: '2024-01-31T16:45:00Z'
+  },
+  {
+    id: '5',
+    name: 'Infrastructure Upgrade',
+    description: 'Server infrastructure modernization and cloud migration project.',
+    status: 'On Hold',
+    priority: 'Low',
+    startDate: '2024-03-01',
+    endDate: '2024-09-30',
+    budget: 120000,
+    spent: 15000,
+    progress: 10,
+    managerId: '5',
+    teamMembers: ['5', '13'],
+    tasks: {
+      total: 28,
+      completed: 2,
+      inProgress: 3,
+      pending: 23
+    },
+    milestones: [
+      { id: '1', name: 'Infrastructure Assessment', dueDate: '2024-03-15', completed: true },
+      { id: '2', name: 'Migration Planning', dueDate: '2024-04-30', completed: false },
+      { id: '3', name: 'Cloud Setup', dueDate: '2024-07-15', completed: false },
+      { id: '4', name: 'Data Migration', dueDate: '2024-09-15', completed: false }
+    ],
+    tags: ['Infrastructure', 'Cloud Migration', 'DevOps'],
+    department: 'Operations',
+    createdAt: '2024-02-15T00:00:00Z',
+    updatedAt: '2024-02-28T11:30:00Z'
+  }
+];
+
+export const mockProjectStats = {
+  totalProjects: mockProjects.length,
+  activeProjects: mockProjects.filter(p => p.status === 'Active').length,
+  completedProjects: mockProjects.filter(p => p.status === 'Completed').length,
+  totalBudget: mockProjects.reduce((sum, p) => sum + p.budget, 0),
+  totalSpent: mockProjects.reduce((sum, p) => sum + p.spent, 0),
+  averageProgress: Math.round(mockProjects.reduce((sum, p) => sum + p.progress, 0) / mockProjects.length),
+  onTimeProjects: mockProjects.filter(p => 
+    p.status === 'Completed' || new Date(p.endDate) > new Date()
+  ).length,
+  overdueProjects: mockProjects.filter(p => 
+    p.status !== 'Completed' && new Date(p.endDate) < new Date()
+  ).length
+};
